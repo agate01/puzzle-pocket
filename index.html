@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6f8">
+  <meta name="description" content="いつでも遊べる、自分だけのパズル集">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Puzzle Pocket</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">P</div>
+    <div><div class="brand">Puzzle Pocket</div><div class="tagline">いつでも、ひとつ謎解き。</div></div>
+    <button id="homeBtn" class="icon-btn" aria-label="ホームへ" hidden>⌂</button>
+  </header>
+  <main id="app" class="main">
+    <section id="homeView">
+      <div class="welcome">
+        <p class="eyebrow">YOUR PUZZLE COLLECTION</p>
+        <h1>今日は、どの謎にする？</h1>
+        <p class="muted">気軽にひと問。じっくり考えるのも自由。</p>
+      </div>
+      <div class="stats">
+        <div><strong id="solvedCount">0</strong><span>クリア</span></div>
+        <div><strong id="attemptCount">0</strong><span>挑戦</span></div>
+        <div><strong id="accuracy">—</strong><span>正解率</span></div>
+      </div>
+      <h2 class="section-title">パズルを選ぶ</h2>
+      <div class="category-grid">
+        <button class="category-card sudoku-card" data-category="sudoku">
+          <span class="card-icon">▦</span><span class="card-title">数独</span><span class="card-sub">数字を埋めて完成させよう</span><span class="card-arrow">→</span>
+        </button>
+        <button class="category-card riddle-card" data-category="riddle">
+          <span class="card-icon">✦</span><span class="card-title">ひらめき問題</span><span class="card-sub">発想を切り替えて解こう</span><span class="card-arrow">→</span>
+        </button>
+        <button class="category-card shape-card" data-category="shape">
+          <span class="card-icon">◇</span><span class="card-title">図形・マッチ棒</span><span class="card-sub">形や配置を考えよう</span><span class="card-arrow">→</span>
+        </button>
+        <button class="category-card logic-card" data-category="logic">
+          <span class="card-icon">⌘</span><span class="card-title">論理推理</span><span class="card-sub">条件を整理して答えよう</span><span class="card-arrow">→</span>
+        </button>
+      </div>
+      <div class="home-footer"><span>PUZZLE POCKET</span><span id="totalProblems">収録問題 8問＋数独</span></div>
+    </section>
+    <section id="gameView" hidden></section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

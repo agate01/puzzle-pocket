@@ -1,0 +1,10 @@
+{
+  "name": "Puzzle Pocket",
+  "short_name": "Puzzle Pocket",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#f5f6f8",
+  "lang": "ja",
+  "icons": []
+}
